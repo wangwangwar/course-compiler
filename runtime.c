@@ -55,14 +55,14 @@ static inline int64_t get_ptr_bitfield(int64_t tag){
 
 // The following needs to stay in sync with the any-tag function
 // in dynamic-typing.rkt.  -Jeremy
-static const int ANY_TAG_MASK = 7;
-static const int ANY_TAG_LEN = 3;
-static const int ANY_TAG_INT = 1;    // 001
-static const int ANY_TAG_BOOL = 4;   // 100
-static const int ANY_TAG_VEC = 2;    // 010
-static const int ANY_TAG_FUN = 3;    // 011
-static const int ANY_TAG_VOID = 5;   // 101
-static const int ANY_TAG_PTR = 0; // not an any, a raw pointer
+#define ANY_TAG_MASK 7
+#define ANY_TAG_LEN 3
+#define ANY_TAG_INT 1    // 001
+#define ANY_TAG_BOOL 4   // 100
+#define ANY_TAG_VEC 2    // 010
+#define ANY_TAG_FUN 3    // 011
+#define ANY_TAG_VOID 5   // 101
+#define ANY_TAG_PTR 0 // not an any, a raw pointer
 
 int any_tag(int64_t any) {
   return any & ANY_TAG_MASK;
